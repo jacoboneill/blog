@@ -1,4 +1,4 @@
-package twosum
+package two_sum
 
 func naiveSolution(nums []int, target int) []int {
 	for i := 0; i < len(nums)-1; i++ {
