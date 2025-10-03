@@ -22,7 +22,9 @@ This is the explanation that *Leetcode* gives, but I'll be honest it took me thr
 
 ### Example
 > l1: 1 &rarr; 2 &rarr; 3 = 321
+>
 > l2: 4 &rarr; 5 &rarr; 6 = 654
+>
 > sum: 975 = 5 &rarr; 7 &rarr; 9
 
 ## The Naive Approach
@@ -130,7 +132,7 @@ return (1) -> (2) -> (3)
 There are unfortunately a few problems with this approach. The first one being is that it is really slow.
 You have to remember it has to loop through each linked-list and then generate another list. This means that you are going to be in the $O(3n)$ which when we normally look at time complexity would be simplified to $O(n)$ but in this case there is an actual $O(n)$ solution that we can do instead
 
-The other (pretty major) issue is our conversion of linked-list to integer. In Python this is not too bad as an "integer" can change interchangeably between an `int` and a `long` without the developer even knowing [\[1\]](https://stackoverflow.com/questions/7604966/maximum-and-minimum-values-for-ints). But when I was porting this answer over to Go, that was when I realised this answer would not work (Go's maximum integer is 1.8*10^20 so therefore the maximum length of a linked-list is 20 before things start to break)[\[2\]](https://go.dev/tour/basics/11)
+The other (pretty major) issue is our conversion of linked-list to integer. In Python this is not too bad as an "integer" can change interchangeably between an `int` and a `long` without the developer even knowing [\[1\]](https://stackoverflow.com/questions/7604966/maximum-and-minimum-values-for-ints). But when I was porting this answer over to Go, that was when I realised this answer would not work (Go's maximum integer is $1.8*10^20$ so therefore the maximum length of a linked-list is 20 before things start to break)[\[2\]](https://go.dev/tour/basics/11)
 
 So what is the *"correct"* way to solve this problem
 
@@ -140,6 +142,7 @@ The optimal way you would have learned in primary school (or elementary school f
 
 So in our previous example of:
 > l1: 1 &rarr; 2 &rarr; 3
+> 
 > l2: 4 &rarr; 5 &rarr; 6
 
 We would do:
@@ -166,7 +169,7 @@ def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optio
     return dummy.next
 ```
 
-This was my second attempt at the problem after getting the hint of *"treat it like adding two numbers in school"* (thanks to [Neetcode](https://www.youtube.com/watch?v=wgFPrzTjm7s)) for the hint. After watching his video I found my solution was essentially the same.
+This was my second attempt at the problem after getting the hint of *"treat it like adding two numbers in school"* (thanks [Neetcode](https://www.youtube.com/watch?v=wgFPrzTjm7s) for the hint). After watching his video I found my solution was essentially the same.
 
 ## My Port to Go
 
@@ -204,7 +207,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 The main differences between the Go and Python versions are the checking for `l1` and `l2` being `None`/`nil` or not. If you move around the program flow like I did then it works quite cleanly but trust that I had a very messy first version. Apart from that it seems to mainly be just a syntax difference.
 
-For the [test file](https://github.com/jacoboneill/leetcode/blob/main/002_add_two_numbers/add_two_numbers_test.go) it was actually quite interesting. I implemented a `Atoll` "**A**rray **to** **l**inked-**l**ist" and `Lltoa` "**L**inked-**l**ist **to** **a**rray" utility functions so I can write the cases out as integer arrays, like Leetcode does on their website.
+For the [test file](https://github.com/jacoboneill/leetcode/blob/main/002_add_two_numbers/add_two_numbers_test.go) it was actually quite interesting. I implemented `Atoll` "**A**rray **to** **l**inked-**l**ist" and `Lltoa` "**L**inked-**l**ist **to** **a**rray" utility functions so I can write the cases out as integer arrays, like Leetcode does on their website.
 
 ```go
 func Atoll(arr []int) *ListNode {
