@@ -1,9 +1,8 @@
 ---
-title: Leetcode 001 Two Sum
 author: Jacob O'Neill
 date: 02/10/2025
 tags: ["leetcode"]
-urls: { "leetcode": "https://leetcode.com/problems/two-sum", "github": "https://github.com/jacoboneill/leetcode/blob/main/001_two_sum/twosum.go"}
+urls: { "leetcode": "https://leetcode.com/problems/two-sum", "github": "https://github.com/jacoboneill/leetcode/blob/main/001_two_sum/two_sum.go"}
 ---
 # Leetcode 001 Two Sum
 
