@@ -2,7 +2,7 @@
 author: Jacob O'Neill
 date: 03/10/2025
 tags: ["leetcode"]
-urls: { "leetcode": "https://leetcode.com/problems/add-two-numbers", "github": "https://github.com/jacoboneill/blog/blob/main/002_add_two_numbers/add_two_numbers.go"}
+urls: { "leetcode": "https://leetcode.com/problems/add-two-numbers", "github": "https://github.com/jacoboneill/leetcode/blob/main/002_add_two_numbers/add_two_numbers.go"}
 ---
 
 # Leetcode 001 Two Sum
