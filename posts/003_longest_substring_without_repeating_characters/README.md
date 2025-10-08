@@ -1,6 +1,6 @@
 ---
 author: Jacob O'Neill
-date: 05/10/2025
+date: 08/10/2025
 tags: ["leetcode"]
 urls: { "leetcode": "https://leetcode.com/problems/longest-substring-without-repeating-characters", "github": "https://github.com/jacoboneill/blog/blob/main/posts/003_longest_substring_without_repeating_characters/longest_substring_without_repeating_characters.go"}
 ---
