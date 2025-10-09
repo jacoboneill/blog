@@ -5,7 +5,7 @@ tags: ["leetcode"]
 urls: { "leetcode": "https://leetcode.com/problems/contains-duplicate", "github": "https://github.com/jacoboneill/blog/blob/main/posts/217_contains_duplicate/contains_duplicate.go"}
 ---
 
-# Leetcode 217 Longest Substring Without Repeating Characters
+# Leetcode 217 Contains Duplicate
 
 This is my first attempt with using [Neetcode](https://neetcode.io/)'s roadmap. The first step is "Arrays & Hashing" and has Leetcode's 217 as the first question
 
