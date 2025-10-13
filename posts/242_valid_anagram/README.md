@@ -1,6 +1,6 @@
 ---
 author: Jacob O'Neill
-date: 09/10/2025
+date: 13/10/2025
 tags: ["leetcode"]
 urls: { "leetcode": "https://leetcode.com/problems/valid-anagram", "github": "https://github.com/jacoboneill/blog/blob/main/posts/242_valid_anagram/valid_anagram.go"}
 ---
