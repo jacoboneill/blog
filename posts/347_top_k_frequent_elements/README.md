@@ -159,3 +159,9 @@ Now I am not a massive fan of this function, because in Go, we would not just re
 > This is because the Leetcode constraints can't allow for the code to get to this path, but the Go compiler doesn't know that.
 
 This leads to an $O(n)$ time and space complexity as we will only need to store each item once, and when getting the result from the *bucket sorted array*, this operation is also $O(n)$.
+
+## Conclusion
+
+So, what did I learn? Well, I learned a lot about **bucket sort**, which reminded me of how `hashmap`'s actually work under the hood, and using a `hashmap`'s largest fear (collisions) and using that to my advantage for a problem like this.
+
+While I was doing research for this problem, I found that this was a very typical pattern for *"K Frequent"* problems.
