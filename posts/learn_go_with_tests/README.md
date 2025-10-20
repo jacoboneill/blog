@@ -21,11 +21,13 @@ The introduction does a lot of things for the reader, it explains how the writer
 The infamous *Hello, World*, a developers first steps into a new language, but this time with testing in mind. They split the program up to create a function that generates the `Hello, World!` `string`, and then pass that function into `main` to print to the screen. This `Hello` function can then be tested on to make sure that the returned string is in fact `Hello, World!`. Seems pretty redundant for a test until you read on and it explains about refactoring. It states that if you have unit tests for behaviour, then it is easier to catch out mistakes when refactoring. They give this excellent example of refactoring in the introduction:
 
 ```go
+import "fmt"
+
 // Before refactoring
 func Hello(name, language string) (string, error) {
     if language == "es" {
         return "Hola, " + name, nil
-    } else if langauge == "fr" {
+    } else if language == "fr" {
         return "Bonjour, " + name, nil
     } else if language == "en" {
         return "Hello, " + name, nil
@@ -35,11 +37,11 @@ func Hello(name, language string) (string, error) {
 }
 
 // After refactoring
-func Hello(name, language string) (string, error) {
+func HelloV2(name, language string) (string, error) {
     m := map[string]string{
-        "en": "Hola",
+        "es": "Hola",
         "fr": "Bonjour",
-        "en": "Hello"
+        "en": "Hello",
     }
 
     hello, ok := m[language]
@@ -60,11 +62,11 @@ package main
 import "fmt"
 
 func Hello() string {
-	return "Hello, World!"
+    return "Hello, World!"
 }
 
 func main() {
-	fmt.Println(Hello())
+    fmt.Println(Hello())
 }
 ```
 
@@ -75,12 +77,12 @@ package main
 import "testing"
 
 func TestHello(t *testing.T) {
-	got := Hello()
-	want := "Hello, World!"
+    got := Hello()
+    want := "Hello, World!"
 
-	if got != want {
-		t.Errorf("got %q, want %q", got, want)
-	}
+    if got != want {
+        t.Errorf("got %q, want %q", got, want)
+    }
 }
 ```
 
