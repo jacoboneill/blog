@@ -379,3 +379,75 @@ func ExampleAdd() {
 ```
 
 While useful, I doubt I will use this feature often.
+
+## Iteration
+
+Iteration introduces you to the `for` loop. It tries to teach you the classical syntax used in most C-like languages:
+
+```go
+const N = 5
+
+for i := 0; i < N; i++ {
+	// Do something N times
+}
+```
+
+With my experience of Go however, I find that this is rarely used. Actually, `for` loops in Go are typically a bit more pythonic:
+```go
+arr := []int{1,2,3,4,5}
+
+for i := range arr {
+	// have just the index of each element
+}
+
+for _, elem := range arr {
+	// have just each element
+}
+
+for i, elem := range arr{
+	// have the index and element
+}
+
+const N = 5
+
+for range N {
+	// Drop in replacement for classic syntax
+}
+```
+
+This was quite an easy chapter, you take a string input and repeat it `n` times. Originally you use string concatenation using `+=`, then you learn about [`strings.Builder`](https://pkg.go.dev/strings#Builder). This is because `string`s in Go are immutable, meaning each time you do `+=` you actually create a copy of the `string` with the concatenation and then delete the old `string`, which is fairly inefficient with lots of concatenations like this one. Finally, you create a function that can take in an `integer` for the amount of times it should repeat.
+
+Different to the book, I added an error case (and tested for it) for if `n` is below 0.
+
+```go
+// iteration_test.go
+func TestRepeatNTimes(t *testing.T) {
+	//...
+	t.Run("negative times", func(t *testing.T) {
+		_, err := RepeatNTimes("c", -1)
+
+		if err == nil {
+			t.Errorf("expected error, got <nil>")
+		}
+	})
+}
+
+// iteration.go
+func RepeatNTimes(input string, n int) (string, error) {
+	if n < 0 {
+		return "", fmt.Errorf("n has to be larger than 0")
+	}
+
+	var b strings.Builder
+
+	for range n {
+		b.WriteString(input)
+	}
+
+	return b.String(), nil
+}
+```
+
+I did this as this seems to be the norm in Go. Finally, I did the extra assignmets:
+- Write `ExampleRepeatNTimes` for `pkgsite` command
+- Add doc-comments above all of the functions
