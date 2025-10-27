@@ -339,4 +339,43 @@ func Hello(name, language string) string {
 }
 ```
 
-This uses the power of a map, while checking if there is a `translation` to get the default. This is what we mentioned above.
+This uses the power of a `map`, while checking if there is a `translation` to get the default. This is what we mentioned above.
+
+## Integers
+
+The book wants us to make an `Add` function, pretty simple really but makes us use the `%d` format specifier for `d`igits. The thing I found more interesting however, is that if you add a comment above the function and use `go doc Add` in the terminal, it will format the comment nicely:
+
+```go
+// intergers.go
+
+// Add takes two integers and returns the sum of them.
+func Add(a, b int) int {
+	return a + b
+}
+```
+
+```
+> go doc Add
+package integers // import "."
+
+func Add(a, b int) int
+    Add takes two integers and returns the sum of them.
+```
+
+This can even be taken a step further by adding *testable examples*, however these only show using the `pkgsite` command:
+
+```go
+// intergers_test.go
+import (
+	"fmt"
+	"testing"
+)
+
+func ExampleAdd() {
+	sum := Add(1, 5)
+	fmt.Println(sum)
+	// Output: 6
+}
+```
+
+While useful, I doubt I will use this feature often.
