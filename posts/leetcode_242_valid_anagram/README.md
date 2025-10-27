@@ -2,7 +2,7 @@
 author: Jacob O'Neill
 date: 13/10/2025
 tags: ["leetcode"]
-urls: { "leetcode": "https://leetcode.com/problems/valid-anagram", "github": "https://github.com/jacoboneill/blog/blob/main/posts/242_valid_anagram/valid_anagram.go"}
+urls: { "leetcode": "https://leetcode.com/problems/valid-anagram", "github": "https://github.com/jacoboneill/blog/blob/main/posts/leetcode_242_valid_anagram/valid_anagram.go"}
 ---
 
 # Leetcode 242 Valid Anagram

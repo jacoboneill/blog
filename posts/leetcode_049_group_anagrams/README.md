@@ -2,7 +2,7 @@
 author: Jacob O'Neill
 date: 12/10/2025
 tags: ["leetcode"]
-urls: { "leetcode": "https://leetcode.com/problems/group-anagrams", "github": "https://github.com/jacoboneill/blog/blob/main/posts/049_group_anagrams/group_anagrams.go"}
+urls: { "leetcode": "https://leetcode.com/problems/group-anagrams", "github": "https://github.com/jacoboneill/blog/blob/main/posts/leetcode_049_group_anagrams/group_anagrams.go"}
 ---
 
 # Leetcode 049 Group Anagrams

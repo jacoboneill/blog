@@ -2,7 +2,7 @@
 author: Jacob O'Neill
 date: 09/10/2025
 tags: ["leetcode"]
-urls: { "leetcode": "https://leetcode.com/problems/contains-duplicate", "github": "https://github.com/jacoboneill/blog/blob/main/posts/217_contains_duplicate/contains_duplicate.go"}
+urls: { "leetcode": "https://leetcode.com/problems/contains-duplicate", "github": "https://github.com/jacoboneill/blog/blob/main/posts/leetcode_217_contains_duplicate/contains_duplicate.go"}
 ---
 
 # Leetcode 217 Contains Duplicate

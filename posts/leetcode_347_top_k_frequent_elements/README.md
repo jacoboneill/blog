@@ -2,7 +2,7 @@
 author: Jacob O'Neill
 date: 13/10/2025
 tags: ["leetcode"]
-urls: { "leetcode": "https://leetcode.com/problems/top-k-frequent-elements", "github": "https://github.com/jacoboneill/blog/blob/main/posts/347_top_k_frequent_elements/top_k_frequent_elements.go"}
+urls: { "leetcode": "https://leetcode.com/problems/top-k-frequent-elements", "github": "https://github.com/jacoboneill/blog/blob/main/posts/leetcode_347_top_k_frequent_elements/top_k_frequent_elements.go"}
 ---
 
 # Leetcode 347 Top K Frequent Elements

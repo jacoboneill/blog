@@ -2,7 +2,7 @@
 author: Jacob O'Neill
 date: 17/10/2025
 tags: ["leetcode"]
-urls: { "lintcode": "https://www.lintcode.com/problem/659/", "github": "https://github.com/jacoboneill/blog/blob/main/posts/271_encode_and_decode_string/encode_and_decode_string.go"}
+urls: { "lintcode": "https://www.lintcode.com/problem/659/", "github": "https://github.com/jacoboneill/blog/blob/main/posts/leetcode_271_encode_and_decode_string/encode_and_decode_string.go"}
 ---
 
 # Leetcode 271 Encode and Decode String
